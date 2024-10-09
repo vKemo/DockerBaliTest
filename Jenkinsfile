@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Run the container with the built image
-                    sh 'docker run my-script-runner'
+                    sh 'docker run -d my-script-runner'
                 }
             }
         }
