@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+         stage('Checkout Repository') {
+            steps {
+                git url: 'https://github.com/vKemo/DockerBaliTest/', branch: 'main'
+            }
+        }
+       
         stage('Build Docker Image') {
             steps {
                 script {
